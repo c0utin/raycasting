@@ -4,6 +4,8 @@ const c = @cImport({
 });
 
 // global
+
+// screen
 const screenWidth = 640;
 const screenHeight = 480;
 const mapWidth = 24;
@@ -35,6 +37,19 @@ const worldMap = [mapWidth][mapHeight]i32{
     .{ 1, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
     .{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
 };
+
+// player
+const posX = 22;
+const posY = 12;
+
+const dirX = -1;
+const dirY = 0;
+
+const planeX = 0;
+const planeY = 0.66;
+
+const time = 0;
+const oldTime = 0;
 
 pub fn main() !void {
     if (c.SDL_Init(c.SDL_INIT_VIDEO) < 0) {
